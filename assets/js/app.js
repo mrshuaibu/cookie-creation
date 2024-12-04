@@ -1,6 +1,5 @@
 'use strict';
 
-// Elements
 const firstDialog = document.getElementById('first-dialog');
 const secondDialog = document.getElementById('second-dialog');
 const acceptAllButton = document.getElementById('accept-all');
@@ -26,6 +25,7 @@ function closeDialogs() {
 
 settingsButton.addEventListener('click', () => {
     firstDialog.style.display = 'none';
+    secondDialog.style.display = 'block';
 });
 
 acceptAllButton.addEventListener('click', () => {
@@ -82,7 +82,6 @@ function getOS() {
     if (userAgent.indexOf('Mac') > -1) return 'MacOS';
     if (userAgent.indexOf('Linux') > -1) return 'Linux';
     if (userAgent.indexOf('Android') > -1) return 'Android';
-    if (userAgent.indexOf('iPhone') > -1) return 'iOS';
-    if (userAgent.indexOf('X11') > -1) return 'Unix';
+    if (userAgent.indexOf('like Mac') > -1) return 'iOS';
     return 'Unknown';
 }
