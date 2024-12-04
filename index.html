@@ -1,75 +1,92 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <meta name="author" content="Shuaibu Michael">
-        <meta name="description" content="My web project">
-        <meta name="keywords" content="html, css, web, seo, web development">
-        <title> Shuaibu Michael </title>
-        <link rel="icon" href="./assets/img/favicon.png" type="image/x=icon">
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
-        <link rel="stylesheet" href="./assets/css/style.css" media="all">
-        <script src="./assets/js/app.js" defer></script>
-    </head>
-    <body>
-        <main class="bg" >
-            <div class="bg main-bg">
-                <header>
-                    <div class="container flex nav">
-                        <div class="logo">
-                            <a href="./index.html">Shuaibu Michael</a>
-                        </div>
-                        <div class="get-in-touch-button">
-                            <a href="mailto:shuaibumikel@gmail.com" class="get-in-touch">
-                                Get in touch
-                            </a>
-                        </div>
-                        <div class="menu-icon">
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                            <span class="bar"></span>
-                        </div>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Shuaibu Michael">
+    <meta name="description" content="My web project">
+    <meta name="keywords" content="html, css, web, seo, web development">
+    <title>Shuaibu Michael</title>
+    <link rel="icon" href="./assets/img/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/mrspecht/cdn/reset.css" media="all">
+    <link rel="stylesheet" href="./assets/css/style.css" media="all">
+    <script src="./assets/js/app.js" defer></script>
+</head>
+<body>
+    <main id="main-content" class="bg">
+        <div id="bg-container" class="bg main-bg">
+            <header id="header">
+                <div id="nav-container" class="container flex nav">
+                    <div id="logo" class="logo">
+                        <a href="./index.html">Shuaibu Michael</a>
                     </div>
-                </header>
-                <div class="landing-page container">
-                    <h1>Hi There! I'm Michael</h1>
-                    <p class="subheading">
-                        A student at MITT and software developer passionate 
-                        about creating unique web experiences and solving 
-                        challenges.
-                    </p>
+                    <div id="get-in-touch" class="get-in-touch-button">
+                        <a href="mailto:shuaibumikel@gmail.com" class="get-in-touch">
+                            Get in touch
+                        </a>
+                    </div>
                 </div>
-                <div class="dialog">
-                    <p>
-                        We use cookies to enhance your experience. Please choose your preference:
-                    </p>
-                    <button class="btn accept">Accept All</button>
-                    <button class="btn settings">Settings</button>
-                </div>
-                <div class="dialog">
-                    <p>Select the cookies you want to enable:</p>
-                    <div class="toggle-switch">
-                        <input type="checkbox" id="analytics" checked>
-                        <label for="analytics">Analytics Cookies</label>
-                    </div>
-                    <div class="toggle-switch">
-                        <input type="checkbox" id="marketing" checked>
-                        <label for="marketing">Marketing Cookies</label>
-                    </div>
-                    <div class="toggle-switch">
-                        <input type="checkbox" id="preferences" checked>
-                        <label for="preferences">Preferences Cookies</label>
-                    </div>
-                    <button class="btn accept" id="saveSettings">
-                        Save Settings
-                    </button>
-                </div>
+            </header>
+
+            <div class="landing-page container">
+                <h1>Hi There! I'm Michael</h1>
+                <p class="subheading">
+                    A student at MITT and software developer passionate about 
+                    creating unique web experiences and solving challenges.
+                </p>
             </div>
-        </main>
-    </body>
+
+            <div id="first-dialog" class="dialog flex">
+                <p>
+                    We use cookies to enhance your experience. Please choose your 
+                    preference:
+                </p>
+                <button id="accept-all" class="btn accept">Accept All</button>
+                <button id="settings-btn" class="btn settings">Settings</button>
+            </div>
+
+            <div id="second-dialog" class="dialog">
+                <p>Select the options you want to enable:</p>
+
+                <div id="browser-toggle" class="toggle-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="browser" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="browser">Browser Information</label>
+                </div>
+
+                <div id="os-toggle" class="toggle-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="os" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="os">Operating System Information</label>
+                </div>
+            
+                <div id="screen-width-toggle" class="toggle-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="screen-width" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="screen-width">Screen Width</label>
+                </div>
+            
+                <div id="screen-height-toggle" class="toggle-switch">
+                    <label class="switch">
+                        <input type="checkbox" id="screen-height" checked>
+                        <span class="slider round"></span>
+                    </label>
+                    <label for="screen-height">Screen Height</label>
+                </div>
+            
+                <button id="save-settings" class="btn accept">Save Settings</button>
+            </div>                            
+
+            <div id="overlay" class="overlay"></div>
+        </div>
+    </main>
+</body>
 </html>
